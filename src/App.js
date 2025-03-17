@@ -1,7 +1,11 @@
+import { Container } from "react-bootstrap";
 
-function App() {
+const App = () => {
   return (
-    <h1>Hello</h1>
+    <Container>
+      <h1 className="mb-4 text-center">Hello</h1>
+    </Container>
+    
   );
 }
 
