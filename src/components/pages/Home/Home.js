@@ -1,10 +1,10 @@
-import styles from './AllTables.module.scss';
+import styles from './Home.module.scss';
 import PageTitle from '../../views/PageTitle/PageTitle';
 
-const AllTables = () => {
+const Home = () => {
   return(
     <PageTitle>All tables</PageTitle>
   )
 };
 
-export default AllTables;
+export default Home;
