@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const TableGeneral = ({id, status}) => {
     return (
-      <Card className="w-100 p-2 card border-0 border-bottom">
+      <Card className="w-100 py-3 card border-0 border-bottom">
         <div className="d-flex justify-content-between align-items-center">
           <div>
             <span className='fs-4 fw-bold'>Table {id}</span>
