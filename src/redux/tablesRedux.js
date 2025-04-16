@@ -1,3 +1,5 @@
+import { API_URL } from "../config";
+
 // selectors
 export const getAllTables = state => state.tables;
 export const getTableById = (state, id) => state.tables.find(table => table.id === id);
@@ -17,7 +19,7 @@ export const add_table = payload => ({type: ADD_TABLE, payload});
 
 export const fetchTables = () => {
   return (dispatch) => {
-    fetch('http://localhost:3131/api/tables')
+    fetch(API_URL + '/tables')
     .then(res => res.json())
     .then(tables => dispatch(update_tables(tables)));
   };
@@ -31,7 +33,7 @@ export const updateTableRequest = (updatedTable, confirmation) => {
       body: JSON.stringify(updatedTable)
     };
     
-    fetch(`http://localhost:3131/api/tables/${updatedTable.id}`, options)
+    fetch(API_URL + `/tables/${updatedTable.id}`, options)
     .then((res) => {
       if(!res.ok){
         throw new Error(`Error. Status: ${res.status}`);
@@ -49,7 +51,7 @@ export const updateTableRequest = (updatedTable, confirmation) => {
 
 export const removeTableRequest = (idToRemove) => {
   return (dispatch) => {
-    fetch(`http://localhost:3131/api/tables/${idToRemove}`, {
+    fetch(API_URL + `/tables/${idToRemove}`, {
       method: 'DELETE'
     })
     .then((res) => {
@@ -71,7 +73,7 @@ export const addTableRequest = (newTable, confirmation) => {
       body: JSON.stringify(newTable)
     };
 
-    fetch('http://localhost:3131/api/tables', options)
+    fetch(API_URL + '/tables', options)
     .then((res) => {
       if (!res.ok) {
         throw new Error(`Error. Status: ${res.status}`);
