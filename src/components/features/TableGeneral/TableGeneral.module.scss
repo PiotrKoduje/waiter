@@ -1,0 +1,15 @@
+.removeButton{
+  margin-left: 10px;
+}
+
+.descriptions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 420px){
+  .descriptions{
+    flex-direction: column;
+  }
+}

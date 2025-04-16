@@ -9,6 +9,7 @@ const NavBar = () => {
       <span className="navbar-brand text-white">Waiter.app</span>
         <Nav className="ms-auto">
           <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+          <Nav.Link as={NavLink} to="/addTable">Add table</Nav.Link>
         </Nav>
       </Container>
     </Navbar>

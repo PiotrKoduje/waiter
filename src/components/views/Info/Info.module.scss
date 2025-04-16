@@ -1,0 +1,16 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+
+.infoWindow{
+  font-size: 20px;
+  width: 40%;
+  height: 15vh;
+  background-color: $success;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+  margin: 15px auto 0 auto;
+}
